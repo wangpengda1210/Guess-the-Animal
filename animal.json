@@ -1,0 +1,34 @@
+{
+  "value" : "Can it climb tree?",
+  "tureToParent" : false,
+  "left" : {
+    "value" : "Is it living in the forest?",
+    "parentValue" : "Can it climb tree?",
+    "tureToParent" : false,
+    "left" : {
+      "value" : "dog",
+      "parentValue" : "Is it living in the forest?",
+      "tureToParent" : false
+    },
+    "right" : {
+      "value" : "wolf",
+      "parentValue" : "Is it living in the forest?",
+      "tureToParent" : true
+    }
+  },
+  "right" : {
+    "value" : "Does it have a long bushy tail?",
+    "parentValue" : "Can it climb tree?",
+    "tureToParent" : true,
+    "left" : {
+      "value" : "cat",
+      "parentValue" : "Does it have a long bushy tail?",
+      "tureToParent" : false
+    },
+    "right" : {
+      "value" : "lyxn",
+      "parentValue" : "Does it have a long bushy tail?",
+      "tureToParent" : true
+    }
+  }
+}

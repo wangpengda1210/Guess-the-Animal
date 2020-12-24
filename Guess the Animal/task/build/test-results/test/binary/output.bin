@@ -1,0 +1,832 @@
+[1;31m
+Start test 1[0m
+english is started.
+Good morning!
+
+ I want to learn about animals.
+ Which animal do you like most?
+> cat
+
+&Welcome to the animals expert system!
+
+What do you want to do:
+
+1. Play the guessing game
+2. List of all animals
+3. Search for an animal
+4. Calculate statistics
+5. Print the Knowledge Tree
+	0. Exit
+> 1
+)You think of an animal, and I guess it.
+ Press enter when you're ready.
+> 
+Is it a cat?
+> No
+-I give up. What animal do you have in mind?
+> dog
+4Specify a fact that distinguishes a cat from a dog.
+;The sentence should be of the format: 'It can/has/is ...'.
+
+> it can climb trees
+%Is the statement correct for a dog?
+> no
+.I learned the following facts about animals:
+- The cat can climb trees.
+- The dog can't climb trees.
+9I can distinguish these animals by asking the question:
+- Can it climb trees?
++Nice! I've learned so much about animals!
+
+Would you like to play again?
+> yes
+)You think of an animal, and I guess it.
+ Press enter when you're ready.
+> 
+Can it climb trees?
+> yes
+Is it a cat?
+> no
+-I give up. What animal do you have in mind?
+> lynx
+5Specify a fact that distinguishes a cat from a lynx.
+;The sentence should be of the format: 'It can/has/is ...'.
+
+> it is living in the forest
+&Is the statement correct for a lynx?
+> yes
+.I learned the following facts about animals:
+'- The cat isn't living in the forest.
+%- The lynx is living in the forest.
+9I can distinguish these animals by asking the question:
+- Is it living in the forest?
++Nice! I've learned so much about animals!
+
+Would you like to play again?
+> no
+What do you want to do:
+
+1. Play the guessing game
+2. List of all animals
+3. Search for an animal
+4. Calculate statistics
+5. Print the Knowledge Tree
+	0. Exit
+> 0
+
+See you soon!
+Good morning!
+
+
+&Welcome to the animals expert system!
+
+What do you want to do:
+
+1. Play the guessing game
+2. List of all animals
+3. Search for an animal
+4. Calculate statistics
+5. Print the Knowledge Tree
+	0. Exit
+> 2
+Here are the animals I know:
+- cat
+- dog
+- lynx
+What do you want to do:
+
+1. Play the guessing game
+2. List of all animals
+3. Search for an animal
+4. Calculate statistics
+5. Print the Knowledge Tree
+	0. Exit
+> 3
+Enter the animal:
+> lynx
+Facts about the lynx:
+- It can climb trees.
+- It is living in the forest.
+What do you want to do:
+
+1. Play the guessing game
+2. List of all animals
+3. Search for an animal
+4. Calculate statistics
+5. Print the Knowledge Tree
+	0. Exit
+> 4
+The Knowledge Tree stats
+
+3- root node                    It can climb trees
+"- total number of nodes        5
+"- total number of animals      3
+"- total number of statements   2
+"- height of the tree           2
+"- minimum depth                1
+$- average depth                1.7
+What do you want to do:
+
+1. Play the guessing game
+2. List of all animals
+3. Search for an animal
+4. Calculate statistics
+5. Print the Knowledge Tree
+	0. Exit
+> 0
+
+Bye!
+Good morning!
+
+ I want to learn about animals.
+ Which animal do you like most?
+> cat
+
+&Welcome to the animals expert system!
+
+What do you want to do:
+
+1. Play the guessing game
+2. List of all animals
+3. Search for an animal
+4. Calculate statistics
+5. Print the Knowledge Tree
+	0. Exit
+> 1
+)You think of an animal, and I guess it.
+ Press enter when you're ready.
+> 
+Is it a cat?
+> No
+-I give up. What animal do you have in mind?
+> dog
+4Specify a fact that distinguishes a cat from a dog.
+;The sentence should be of the format: 'It can/has/is ...'.
+
+> it can climb trees
+%Is the statement correct for a dog?
+> no
+.I learned the following facts about animals:
+- The cat can climb trees.
+- The dog can't climb trees.
+9I can distinguish these animals by asking the question:
+- Can it climb trees?
++Nice! I've learned so much about animals!
+
+Would you like to play again?
+> yes
+)You think of an animal, and I guess it.
+ Press enter when you're ready.
+> 
+Can it climb trees?
+> yes
+Is it a cat?
+> no
+-I give up. What animal do you have in mind?
+> lynx
+5Specify a fact that distinguishes a cat from a lynx.
+;The sentence should be of the format: 'It can/has/is ...'.
+
+> it is living in the forest
+&Is the statement correct for a lynx?
+> yes
+.I learned the following facts about animals:
+'- The cat isn't living in the forest.
+%- The lynx is living in the forest.
+9I can distinguish these animals by asking the question:
+- Is it living in the forest?
++Nice! I've learned so much about animals!
+
+Would you like to play again?
+> no
+What do you want to do:
+
+1. Play the guessing game
+2. List of all animals
+3. Search for an animal
+4. Calculate statistics
+5. Print the Knowledge Tree
+	0. Exit
+> 0
+
+Bye!
+Good morning!
+
+
+&Welcome to the animals expert system!
+
+What do you want to do:
+
+1. Play the guessing game
+2. List of all animals
+3. Search for an animal
+4. Calculate statistics
+5. Print the Knowledge Tree
+	0. Exit
+> 2
+Here are the animals I know:
+- cat
+- dog
+- lynx
+What do you want to do:
+
+1. Play the guessing game
+2. List of all animals
+3. Search for an animal
+4. Calculate statistics
+5. Print the Knowledge Tree
+	0. Exit
+> 3
+Enter the animal:
+> lynx
+Facts about the lynx:
+- It can climb trees.
+- It is living in the forest.
+What do you want to do:
+
+1. Play the guessing game
+2. List of all animals
+3. Search for an animal
+4. Calculate statistics
+5. Print the Knowledge Tree
+	0. Exit
+> 4
+The Knowledge Tree stats
+
+3- root node                    It can climb trees
+"- total number of nodes        5
+"- total number of animals      3
+"- total number of statements   2
+"- height of the tree           2
+"- minimum depth                1
+$- average depth                1.7
+What do you want to do:
+
+1. Play the guessing game
+2. List of all animals
+3. Search for an animal
+4. Calculate statistics
+5. Print the Knowledge Tree
+	0. Exit
+> 0
+
+Have a nice day!
+Good morning!
+
+ I want to learn about animals.
+ Which animal do you like most?
+> cat
+
+&Welcome to the animals expert system!
+
+What do you want to do:
+
+1. Play the guessing game
+2. List of all animals
+3. Search for an animal
+4. Calculate statistics
+5. Print the Knowledge Tree
+	0. Exit
+> 1
+)You think of an animal, and I guess it.
+ Press enter when you're ready.
+> 
+Is it a cat?
+> No
+-I give up. What animal do you have in mind?
+> dog
+4Specify a fact that distinguishes a cat from a dog.
+;The sentence should be of the format: 'It can/has/is ...'.
+
+> it can climb trees
+%Is the statement correct for a dog?
+> no
+.I learned the following facts about animals:
+- The cat can climb trees.
+- The dog can't climb trees.
+9I can distinguish these animals by asking the question:
+- Can it climb trees?
++Nice! I've learned so much about animals!
+
+Would you like to play again?
+> yes
+)You think of an animal, and I guess it.
+ Press enter when you're ready.
+> 
+Can it climb trees?
+> yes
+Is it a cat?
+> no
+-I give up. What animal do you have in mind?
+> lynx
+5Specify a fact that distinguishes a cat from a lynx.
+;The sentence should be of the format: 'It can/has/is ...'.
+
+> it is living in the forest
+&Is the statement correct for a lynx?
+> yes
+.I learned the following facts about animals:
+'- The cat isn't living in the forest.
+%- The lynx is living in the forest.
+9I can distinguish these animals by asking the question:
+- Is it living in the forest?
++Nice! I've learned so much about animals!
+
+Would you like to play again?
+> no
+What do you want to do:
+
+1. Play the guessing game
+2. List of all animals
+3. Search for an animal
+4. Calculate statistics
+5. Print the Knowledge Tree
+	0. Exit
+> 0
+
+Have a nice day!
+Good morning!
+
+
+&Welcome to the animals expert system!
+
+What do you want to do:
+
+1. Play the guessing game
+2. List of all animals
+3. Search for an animal
+4. Calculate statistics
+5. Print the Knowledge Tree
+	0. Exit
+> 2
+Here are the animals I know:
+- cat
+- dog
+- lynx
+What do you want to do:
+
+1. Play the guessing game
+2. List of all animals
+3. Search for an animal
+4. Calculate statistics
+5. Print the Knowledge Tree
+	0. Exit
+> 3
+Enter the animal:
+> lynx
+Facts about the lynx:
+- It can climb trees.
+- It is living in the forest.
+What do you want to do:
+
+1. Play the guessing game
+2. List of all animals
+3. Search for an animal
+4. Calculate statistics
+5. Print the Knowledge Tree
+	0. Exit
+> 4
+The Knowledge Tree stats
+
+3- root node                    It can climb trees
+"- total number of nodes        5
+"- total number of animals      3
+"- total number of statements   2
+"- height of the tree           2
+"- minimum depth                1
+$- average depth                1.7
+What do you want to do:
+
+1. Play the guessing game
+2. List of all animals
+3. Search for an animal
+4. Calculate statistics
+5. Print the Knowledge Tree
+	0. Exit
+> 0
+
+Bye!
+esperanto is started.
+Bonan matenon!
+
+Mi volas lerni pri bestoj.
+Kiun beston vi plej ŝatas?
+> kato
+
++Bonvenon al la sperta sistemo de la besto!
+
+Kion vi volas fari:
+
+1. Ludi la divenludon
+2. Listo de ĉiuj bestoj
+3. Serĉi beston
+4. Kalkuli statistikojn
+5. Presu la Sciarbon
+
+0. Eliri
+> 1
+*Vi pensu pri besto, kaj mi divenos ĝin.
+Premu enen kiam vi pretas.
+> 
+Ĉu ĝi estas kato?
+> ne
+/Mi rezignas. Kiun beston vi havas en la kapo?
+> hundo
+,Indiku fakton, kiu distingas kato de hundo.
+*La frazo estu laŭ la formato: 'Ĝi ...'.
+
+> Ĝi povas surgrimpi arbon
+%Ĉu la aserto ĝustas por la hundo?
+> ne
+)Mi lernis la jenajn faktojn pri bestoj:
+"- La kato povas surgrimpi arbon.
+&- La hundo ne povas surgrimpi arbon.
+5Mi povas distingi ĉi tiujn bestojn per la demando:
+"- Ĉu ĝi povas surgrimpi arbon?
+(Bela! Mi lernis tiom multe pri bestoj!
+
+Ĉu vi ŝatus ludi denove?
+> jes
+*Vi pensu pri besto, kaj mi divenos ĝin.
+Premu enen kiam vi pretas.
+> 
+ Ĉu ĝi povas surgrimpi arbon?
+> jes
+Ĉu ĝi estas kato?
+> ne
+/Mi rezignas. Kiun beston vi havas en la kapo?
+> linko
+,Indiku fakton, kiu distingas kato de linko.
+*La frazo estu laŭ la formato: 'Ĝi ...'.
+
+> ĝi loĝas en la arbaro
+%Ĉu la aserto ĝustas por la linko?
+> jes
+)Mi lernis la jenajn faktojn pri bestoj:
+#- La kato ne loĝas en la arbaro.
+!- La linko loĝas en la arbaro.
+5Mi povas distingi ĉi tiujn bestojn per la demando:
+ - Ĉu ĝi loĝas en la arbaro?
+(Bela! Mi lernis tiom multe pri bestoj!
+
+Ĉu vi ŝatus ludi denove?
+> ne
+Kion vi volas fari:
+
+1. Ludi la divenludon
+2. Listo de ĉiuj bestoj
+3. Serĉi beston
+4. Kalkuli statistikojn
+5. Presu la Sciarbon
+
+0. Eliri
+> 0
+
+Ĝis baldaŭ!
+Bonan matenon!
+
+
++Bonvenon al la sperta sistemo de la besto!
+
+Kion vi volas fari:
+
+1. Ludi la divenludon
+2. Listo de ĉiuj bestoj
+3. Serĉi beston
+4. Kalkuli statistikojn
+5. Presu la Sciarbon
+
+0. Eliri
+> 2
+ Jen la bestoj, kiujn mi konas:
+	- hundo
+- kato
+	- linko
+Kion vi volas fari:
+
+1. Ludi la divenludon
+2. Listo de ĉiuj bestoj
+3. Serĉi beston
+4. Kalkuli statistikojn
+5. Presu la Sciarbon
+
+0. Eliri
+> 3
+Enigu la nomon de besto:
+> linko
+Faktoj pri la linko:
+- Ĝi povas surgrimpi arbon.
+- Ĝi loĝas en la arbaro.
+Kion vi volas fari:
+
+1. Ludi la divenludon
+2. Listo de ĉiuj bestoj
+3. Serĉi beston
+4. Kalkuli statistikojn
+5. Presu la Sciarbon
+
+0. Eliri
+> 4
+La statistiko de la Scio-Arbo
+
+5- radika nodo             Ĝi povas surgrimpi arbon
+- nombro de nodoj         5
+- nombro de bestoj        3
+- nombro de deklaroj      2
+- alteco de la arbo       2
+- minimuma profundo       1
+ - averaĝa profundo        1,7
+Kion vi volas fari:
+
+1. Ludi la divenludon
+2. Listo de ĉiuj bestoj
+3. Serĉi beston
+4. Kalkuli statistikojn
+5. Presu la Sciarbon
+
+0. Eliri
+> 0
+
+Ĝis revido!
+Bonan matenon!
+
+Mi volas lerni pri bestoj.
+Kiun beston vi plej ŝatas?
+> kato
+
++Bonvenon al la sperta sistemo de la besto!
+
+Kion vi volas fari:
+
+1. Ludi la divenludon
+2. Listo de ĉiuj bestoj
+3. Serĉi beston
+4. Kalkuli statistikojn
+5. Presu la Sciarbon
+
+0. Eliri
+> 1
+*Vi pensu pri besto, kaj mi divenos ĝin.
+Premu enen kiam vi pretas.
+> 
+Ĉu ĝi estas kato?
+> ne
+/Mi rezignas. Kiun beston vi havas en la kapo?
+> hundo
+,Indiku fakton, kiu distingas kato de hundo.
+*La frazo estu laŭ la formato: 'Ĝi ...'.
+
+> Ĝi povas surgrimpi arbon
+%Ĉu la aserto ĝustas por la hundo?
+> ne
+)Mi lernis la jenajn faktojn pri bestoj:
+"- La kato povas surgrimpi arbon.
+&- La hundo ne povas surgrimpi arbon.
+5Mi povas distingi ĉi tiujn bestojn per la demando:
+"- Ĉu ĝi povas surgrimpi arbon?
+(Bela! Mi lernis tiom multe pri bestoj!
+
+Ĉu vi ŝatus ludi denove?
+> jes
+*Vi pensu pri besto, kaj mi divenos ĝin.
+Premu enen kiam vi pretas.
+> 
+ Ĉu ĝi povas surgrimpi arbon?
+> jes
+Ĉu ĝi estas kato?
+> ne
+/Mi rezignas. Kiun beston vi havas en la kapo?
+> linko
+,Indiku fakton, kiu distingas kato de linko.
+*La frazo estu laŭ la formato: 'Ĝi ...'.
+
+> ĝi loĝas en la arbaro
+%Ĉu la aserto ĝustas por la linko?
+> jes
+)Mi lernis la jenajn faktojn pri bestoj:
+#- La kato ne loĝas en la arbaro.
+!- La linko loĝas en la arbaro.
+5Mi povas distingi ĉi tiujn bestojn per la demando:
+ - Ĉu ĝi loĝas en la arbaro?
+(Bela! Mi lernis tiom multe pri bestoj!
+
+Ĉu vi ŝatus ludi denove?
+> ne
+Kion vi volas fari:
+
+1. Ludi la divenludon
+2. Listo de ĉiuj bestoj
+3. Serĉi beston
+4. Kalkuli statistikojn
+5. Presu la Sciarbon
+
+0. Eliri
+> 0
+
+Ĝis revido!
+Bonan matenon!
+
+
++Bonvenon al la sperta sistemo de la besto!
+
+Kion vi volas fari:
+
+1. Ludi la divenludon
+2. Listo de ĉiuj bestoj
+3. Serĉi beston
+4. Kalkuli statistikojn
+5. Presu la Sciarbon
+
+0. Eliri
+> 2
+ Jen la bestoj, kiujn mi konas:
+	- hundo
+- kato
+	- linko
+Kion vi volas fari:
+
+1. Ludi la divenludon
+2. Listo de ĉiuj bestoj
+3. Serĉi beston
+4. Kalkuli statistikojn
+5. Presu la Sciarbon
+
+0. Eliri
+> 3
+Enigu la nomon de besto:
+> linko
+Faktoj pri la linko:
+- Ĝi povas surgrimpi arbon.
+- Ĝi loĝas en la arbaro.
+Kion vi volas fari:
+
+1. Ludi la divenludon
+2. Listo de ĉiuj bestoj
+3. Serĉi beston
+4. Kalkuli statistikojn
+5. Presu la Sciarbon
+
+0. Eliri
+> 4
+La statistiko de la Scio-Arbo
+
+5- radika nodo             Ĝi povas surgrimpi arbon
+- nombro de nodoj         5
+- nombro de bestoj        3
+- nombro de deklaroj      2
+- alteco de la arbo       2
+- minimuma profundo       1
+ - averaĝa profundo        1,7
+Kion vi volas fari:
+
+1. Ludi la divenludon
+2. Listo de ĉiuj bestoj
+3. Serĉi beston
+4. Kalkuli statistikojn
+5. Presu la Sciarbon
+
+0. Eliri
+> 0
+
+Ĝis revido!
+Bonan matenon!
+
+Mi volas lerni pri bestoj.
+Kiun beston vi plej ŝatas?
+> kato
+
++Bonvenon al la sperta sistemo de la besto!
+
+Kion vi volas fari:
+
+1. Ludi la divenludon
+2. Listo de ĉiuj bestoj
+3. Serĉi beston
+4. Kalkuli statistikojn
+5. Presu la Sciarbon
+
+0. Eliri
+> 1
+*Vi pensu pri besto, kaj mi divenos ĝin.
+Premu enen kiam vi pretas.
+> 
+Ĉu ĝi estas kato?
+> ne
+/Mi rezignas. Kiun beston vi havas en la kapo?
+> hundo
+,Indiku fakton, kiu distingas kato de hundo.
+*La frazo estu laŭ la formato: 'Ĝi ...'.
+
+> Ĝi povas surgrimpi arbon
+%Ĉu la aserto ĝustas por la hundo?
+> ne
+)Mi lernis la jenajn faktojn pri bestoj:
+"- La kato povas surgrimpi arbon.
+&- La hundo ne povas surgrimpi arbon.
+5Mi povas distingi ĉi tiujn bestojn per la demando:
+"- Ĉu ĝi povas surgrimpi arbon?
+(Bela! Mi lernis tiom multe pri bestoj!
+
+Ĉu vi ŝatus ludi denove?
+> jes
+*Vi pensu pri besto, kaj mi divenos ĝin.
+Premu enen kiam vi pretas.
+> 
+ Ĉu ĝi povas surgrimpi arbon?
+> jes
+Ĉu ĝi estas kato?
+> ne
+/Mi rezignas. Kiun beston vi havas en la kapo?
+> linko
+,Indiku fakton, kiu distingas kato de linko.
+*La frazo estu laŭ la formato: 'Ĝi ...'.
+
+> ĝi loĝas en la arbaro
+%Ĉu la aserto ĝustas por la linko?
+> jes
+)Mi lernis la jenajn faktojn pri bestoj:
+#- La kato ne loĝas en la arbaro.
+!- La linko loĝas en la arbaro.
+5Mi povas distingi ĉi tiujn bestojn per la demando:
+ - Ĉu ĝi loĝas en la arbaro?
+(Bela! Mi lernis tiom multe pri bestoj!
+
+Ĉu vi ŝatus ludi denove?
+> ne
+Kion vi volas fari:
+
+1. Ludi la divenludon
+2. Listo de ĉiuj bestoj
+3. Serĉi beston
+4. Kalkuli statistikojn
+5. Presu la Sciarbon
+
+0. Eliri
+> 0
+
+Ĝis revido!
+Bonan matenon!
+
+
++Bonvenon al la sperta sistemo de la besto!
+
+Kion vi volas fari:
+
+1. Ludi la divenludon
+2. Listo de ĉiuj bestoj
+3. Serĉi beston
+4. Kalkuli statistikojn
+5. Presu la Sciarbon
+
+0. Eliri
+> 2
+ Jen la bestoj, kiujn mi konas:
+	- hundo
+- kato
+	- linko
+Kion vi volas fari:
+
+1. Ludi la divenludon
+2. Listo de ĉiuj bestoj
+3. Serĉi beston
+4. Kalkuli statistikojn
+5. Presu la Sciarbon
+
+0. Eliri
+> 3
+Enigu la nomon de besto:
+> linko
+Faktoj pri la linko:
+- Ĝi povas surgrimpi arbon.
+- Ĝi loĝas en la arbaro.
+Kion vi volas fari:
+
+1. Ludi la divenludon
+2. Listo de ĉiuj bestoj
+3. Serĉi beston
+4. Kalkuli statistikojn
+5. Presu la Sciarbon
+
+0. Eliri
+> 4
+La statistiko de la Scio-Arbo
+
+5- radika nodo             Ĝi povas surgrimpi arbon
+- nombro de nodoj         5
+- nombro de bestoj        3
+- nombro de deklaroj      2
+- alteco de la arbo       2
+- minimuma profundo       1
+ - averaĝa profundo        1,7
+Kion vi volas fari:
+
+1. Ludi la divenludon
+2. Listo de ĉiuj bestoj
+3. Serĉi beston
+4. Kalkuli statistikojn
+5. Presu la Sciarbon
+
+0. Eliri
+> 0
+
+Ĝis revido!

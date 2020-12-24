@@ -1,0 +1,585 @@
+type: edu
+files:
+- name: src/animals/Main.java
+  visible: true
+  text: |
+    package animals;
+
+    public class Main {
+    }
+  learner_created: false
+- name: test/file-formats.data.yaml
+  visible: false
+  text: |-
+    ---
+    - - json
+    - - xml
+    - - yaml
+  learner_created: false
+- name: test/file-formats.script.yaml
+  visible: false
+  text: |-
+    #
+    # This is a script to test file formats: JSON, YAML, XML.
+    #
+    ---
+    - [start, "-type {0}"]
+    - [contains, "?", "The program should asks the user for a favourite animal"]
+    - [input, cat]
+    - - matches
+      - (?is).*1.*Play.*List.*Search.*stat.*Exit.*
+      - The program should print the menu
+    - [input, "1"]
+    - - contains
+      - You think of an animal, and I guess it.
+      - The program should asks the user to think of an animal
+    - [input, ""] # Press Enter to start the game
+
+    #
+    # The first game started
+    #
+    - - contains
+      - Is it a cat?
+      - The program should asks the user is it the cat
+    - [input, no]
+    - - contains
+      - I give up. What animal do you have in mind?
+      - The program should give up
+    - [input, dog]
+    - - contains
+      - Specify a fact that distinguishes a cat from a dog
+      - The program should find out how one animal differs from another.
+    - [input, It can climbs tree]
+    - - contains
+      - Is the statement correct for a dog?
+      - The program should clarify if the statement is correct for a dog.
+    - [input, No]
+    - - matches
+      - (?si).*(again|repeat|one more game).*
+      - The program should ask to play again
+    - [input, Yes]
+    - - contains
+      - You think of an animal, and I guess it.
+      - The program should asks the user to think of an animal
+    - [input, ""] # Press Enter to start the game
+
+    #
+    # The second game started
+    #
+    - - contains
+      - Can it climbs tree?
+      - The only question in the knowledge tree should be "Can it climbs tree?"
+    - [input, Yes]
+    - - contains
+      - Is it a cat?
+      - The program doesn't print the expected message
+    - [input, No]
+    - - contains
+      - I give up. What animal do you have in mind?
+      - The program should give up
+    - - input
+      - a lynx
+    - - input
+      - It is living in the forest
+    - - contains
+      - Is the statement correct for a lynx?
+      - The program doesn't print the expected message
+    - [input, yes]
+    - [input, no]
+    - - matches
+      - (?is).*1.*Play.*List.*Search.*stat.*0.*Exit.*
+      - The program should print the menu after the user leave the game
+    - - input
+      - "0"
+    - - finish
+      - The program should finish when user select 0. Exit
+
+    - - file exists
+      - "animals.{0}"
+      - "The program should save knowledge tree to animals.{0} file."
+
+    #
+    # Start the program again and load the Knowledge Tree
+    #
+    - - start
+      - "-type {0}"
+    - - not contains
+      - Which animal do you like most?
+      - If knowledge base is exist the program should not asks the user for a favourite animal
+    - - contains
+      - Welcome to the animal expert system!
+      - The program doesn't print the expected message
+    - - matches
+      - (?is).*1.*Play.*List.*Search.*stat.*Exit.*
+      - The program should print the menu
+    - - input
+      - "0"
+    - - finish
+      - The program should finish when user refuse the new game
+    - - file delete
+      - "animals.{0}"
+      - "The test can't delete animals.{0} file."
+  learner_created: false
+- name: test/GuessAnimalTest.java
+  visible: false
+  text: |-
+    import animals.Main;
+    import org.hyperskill.hstest.dynamic.input.DynamicTestingMethod;
+    import org.hyperskill.hstest.stage.StageTest;
+    import org.hyperskill.hstest.testcase.CheckResult;
+
+    import java.io.IOException;
+
+    public class GuessAnimalTest extends StageTest<String> {
+        public GuessAnimalTest() {
+            super(Main.class);
+        }
+
+        @DynamicTestingMethod
+        CheckResult testFileFormats() throws IOException {
+            return new Scenario("file-formats").check();
+        }
+
+        @DynamicTestingMethod
+        CheckResult testMenu() throws IOException {
+            return new Scenario("menu").check();
+        }
+
+    }
+  learner_created: false
+- name: test/menu.data.yaml
+  visible: false
+  text: |-
+    ---
+    #
+    # Test case #1
+    #
+    - - cat
+      - |
+        no
+        shark
+        it is a mammal
+        no
+        yes
+        yes
+        no
+        fox
+        it is living in the forest
+        yes
+        yes
+        yes
+        no
+        no
+        dog
+        it can climb trees
+        no
+        yes
+        yes
+        yes
+        no
+        wolf
+        it has a long bushy tail
+        no
+        yes
+        yes
+        yes
+        no
+        no
+        hare
+        it is a shy animal
+        yes
+        no
+
+      #
+      # 2. List of all animals
+      #
+      - "(?si).*cat.*dog.*hare.*shark.*wolf.*"
+
+      #
+      # 3. Search for an animal
+      #
+      - wolf
+      - "(?si).*is a mammal.*doesn't have a long bushy tail.*isn't a shy animal.*"
+
+      #
+      # Data for the Knowledge Tree statistics
+      #
+      - It is a mammal
+      - "9"
+      - "5"
+      - "4"
+      - "3"
+      - "2"
+      - "2[.,]4"
+  learner_created: false
+- name: test/menu.script.yaml
+  visible: false
+  text: |
+    ---
+    - [start]
+    - [input, "{0}"]  # Favourite animal
+    - [input, "1"]    # Play the game
+    - [input, ""]     # Press Enter
+    - [input, "{1}"]  # Play and fill the knowledge tree
+    #
+    # After filling the tree, we can test all the menu items.
+    #
+    - - matches
+      - "(?is).*1.*Play.*List.*Search.*Calc.*Print.*Exit.*"
+      - The program should print the menu
+
+    #
+    # 2. List of all animals
+    #
+    - [input, "2"]
+    - [matches, "{2}", The program should print a list of all animals in alphabetical order.]
+
+    #
+    # 3. Search for an animal
+    #
+    - [input, "3"]
+    - [contains, "Enter the animal", The program should ask for an animals to search.]
+    - [input, "{3}"]
+    - [matches, "{4}", The program should print facts about the animal]
+
+    #
+    # 4. Knowledge Tree stats
+    #
+    - [input, "4"]
+    - [contains, "The Knowledge Tree stats", The program should print title for statistics]
+    - [matches, "(?is).*root node.*{5}.*", "The root node should be {5}"]
+    - [matches, "(?is).*number of nodes[^\\\\R]*{6}.*", "The total number of nodes should be {6}"]
+    - [matches, "(?is).*number of animals[^\\\\R]*{7}.*", "The total number of animals should be {7}"]
+    - [matches, "(?is).*number of statements[^\\\\R]*{8}.*", "The total number of statements should be {8}"]
+    - [matches, "(?is).*height of the tree[^\\\\R]*{9}.*", "The height of the tree should be {9}"]
+    - [matches, "(?is).*minimum depth[^\\\\R]*{10}.*", "The minimum depth should be {10}"]
+    - [matches, "(?is).*average depth[^\\\\R]*{11}.*", "The average depth should be {11}"]
+  learner_created: false
+- name: test/Scenario.java
+  visible: false
+  text: |-
+    import animals.Main;
+    import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
+    import org.hyperskill.hstest.testcase.CheckResult;
+    import org.hyperskill.hstest.testing.TestedProgram;
+
+    import java.io.File;
+    import java.io.IOException;
+    import java.util.Map;
+    import java.util.function.Predicate;
+
+    import static java.text.MessageFormat.format;
+    import static java.util.function.Predicate.not;
+    import static org.hyperskill.hstest.testcase.CheckResult.correct;
+    import static org.hyperskill.hstest.testcase.CheckResult.wrong;
+
+    public class Scenario {
+        private final Object[][] data;
+        private final String[][] script;
+        private TestedProgram main;
+        private String output = "";
+
+        Scenario(String name) throws IOException {
+            data = new YAMLMapper().readValue(new File("test/" + name + ".data.yaml"), String[][].class);
+            script = new YAMLMapper().readValue(new File("test/" + name + ".script.yaml"), String[][].class);
+        }
+
+        CheckResult check() {
+            for (var values : data) {
+                for (var action : script) {
+                    switch (action[0]) {
+                        case "start":
+                            main = new TestedProgram(Main.class);
+                            output = action.length == 1 ? main.start()
+                                    : main.start(format(action[1], values).split(" "));
+                            continue;
+                        case "input":
+                            output = main.execute(format(action[1], values));
+                            continue;
+                        case "finish":
+                            if (main.isFinished()) continue;
+                            return wrong(format(action[1], values));
+                        default:
+                            final Map<String, Predicate<String>> validation = Map.of(
+                                    "contains", output::contains,
+                                    "not contains", not(output::contains),
+                                    "file exists", file -> new File(file).exists(),
+                                    "file delete", file -> new File(file).delete(),
+                                    "matches", output::matches);
+
+                            if (validation.get(action[0]).test(format(action[1], values))) continue;
+                            return wrong(format(action[2], values));
+                    }
+                }
+            }
+            return correct();
+        }
+
+    }
+  learner_created: false
+- name: src/animals/AnswerType.java
+  visible: true
+  text: |
+    package animals;
+
+    public enum AnswerType {
+
+        POSITIVE, NEGATIVE, UNCLEAR
+
+    }
+  learner_created: true
+- name: src/animals/Answer.java
+  visible: true
+  text: |
+    package animals;
+
+    import java.util.regex.Matcher;
+    import java.util.regex.Pattern;
+
+    public class Answer {
+
+        private static final String[] positiveAnswers = {"y", "yes", "yeah", "yep", "sure", "right",
+                "affirmative", "correct", "indeed", "you bet", "exactly", "you said it"};
+
+        private static final String[] negativeAnswers = {"n", "no", "no way", "nah", "nope", "negative",
+                "I don't think so", "yeah no"};
+
+        public static AnswerType findAnswerType(String answer) {
+            answer = answer.trim();
+
+            for (String positiveAnswer : positiveAnswers) {
+                Pattern pattern = Pattern.compile(positiveAnswer + "([!.])?", Pattern.CASE_INSENSITIVE);
+                Matcher matcher = pattern.matcher(answer);
+                if (matcher.matches()) {
+                    return AnswerType.POSITIVE;
+                }
+            }
+
+            for (String negativeAnswer : negativeAnswers) {
+                Pattern pattern = Pattern.compile(negativeAnswer + "([!.])?", Pattern.CASE_INSENSITIVE);
+                Matcher matcher = pattern.matcher(answer);
+                if (matcher.matches()) {
+                    return AnswerType.NEGATIVE;
+                }
+            }
+
+            return AnswerType.UNCLEAR;
+        }
+
+    }
+  learner_created: true
+- name: src/animals/BinaryTree.java
+  visible: true
+  text: |
+    package animals;
+
+    import com.fasterxml.jackson.annotation.JsonIgnore;
+    import com.fasterxml.jackson.annotation.JsonInclude;
+
+    public class BinaryTree {
+
+        private final Node root;
+
+        public BinaryTree(Node root) {
+            this.root = root;
+        }
+
+        public Node getRoot() {
+            return root;
+        }
+
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        static class Node {
+
+            private String value;
+            private Node left;
+            private Node right;
+
+            public Node() {
+
+            }
+
+            public Node(String value) {
+                this.value = value;
+            }
+
+            public String getValue() {
+                return value;
+            }
+
+            public void setValue(String value) {
+                this.value = value;
+            }
+
+            public Node getLeft() {
+                return left;
+            }
+
+            public void setLeft(Node left) {
+                this.left = left;
+            }
+
+            public Node getRight() {
+                return right;
+            }
+
+            public void setRight(Node right) {
+                this.right = right;
+            }
+
+            @JsonIgnore
+            public boolean isLeaf() {
+                return left == null && right == null;
+            }
+
+        }
+
+    }
+  learner_created: true
+- name: src/animals/Response.java
+  visible: true
+  text: |
+    package animals;
+
+    import java.time.LocalTime;
+    import java.util.ArrayList;
+    import java.util.List;
+    import java.util.Random;
+
+    public class Response {
+
+        private static final String[] unsureResponses = {"I'm not sure I caught you: was it yes or no?",
+                "Funny, I still don't understand, is it yes or no?",
+                "Oh, it's too complicated for me: just tell me yes or no.",
+                "Could you please simply say yes or no?",
+                "Oh, no, don't try to confuse me: say yes or no."};
+
+        private static final String[] goodbyeResponses = {"Have a nice day!", "See you soon!", "Bye!"};
+
+        private static final List<Character> vowels = List.of('a', 'e', 'i', 'o', 'u');
+
+        public static String getCurrentTime() {
+            LocalTime time = LocalTime.now();
+
+            if (time.isAfter(LocalTime.of(5, 0)) && time.isBefore(LocalTime.of(12, 0))) {
+                return "morning";
+            } else if (time.isAfter(LocalTime.of(12, 0)) && time.isBefore(LocalTime.of(18, 0))) {
+                return "afternoon";
+            } else {
+                return "evening";
+            }
+        }
+
+        public static String generateAnimalName(String animal) {
+            animal = animal.toLowerCase().trim();
+
+            String[] words = animal.split(" ");
+            if (words.length >= 2 && (words[0].equals("a") || words[0].equals("an"))) {
+                return animal;
+            } else if (words.length >= 1) {
+                if (vowels.contains(words[0].charAt(0))) {
+                    return "an " + animal;
+                } else {
+                    return "a " + animal;
+                }
+            } else {
+                return "";
+            }
+        }
+
+        public static String getUnsureResponse() {
+            Random random = new Random();
+            return unsureResponses[random.nextInt(unsureResponses.length)];
+        }
+
+        public static String getGoodbyeResponse() {
+            Random random = new Random();
+            return goodbyeResponses[random.nextInt(goodbyeResponses.length)];
+        }
+
+        public static boolean checkFact(String fact) {
+            fact = fact.toLowerCase().trim();
+
+            return fact.startsWith("it is") || fact.startsWith("it can") || fact.startsWith("it has");
+        }
+
+        public static List<String> generateLearnedFact(String fact, String correctAnimal, String incorrectAnimal) {
+            correctAnimal = correctAnimal.toLowerCase().trim();
+            correctAnimal = generateAnimalWithoutArticle(correctAnimal);
+            incorrectAnimal = incorrectAnimal.toLowerCase().trim();
+            incorrectAnimal = generateAnimalWithoutArticle(incorrectAnimal);
+            fact = fact.toLowerCase().trim();
+
+            ArrayList<String> facts = new ArrayList<>();
+
+            String[] words = fact.split(" ");
+            StringBuilder factBuilder = new StringBuilder();
+
+            for (int i = 2; i < words.length; i++) {
+                factBuilder.append(words[i]);
+                if (i != words.length - 1) {
+                    factBuilder.append(" ");
+                }
+            }
+
+            switch (words[1]) {
+                case "can":
+                    facts.add("The " + correctAnimal + " can " + factBuilder);
+                    facts.add("The " + incorrectAnimal + " can't " + factBuilder);
+                    facts.add("Can it " + factBuilder);
+                    break;
+                case "has":
+                    facts.add("The " + correctAnimal + " has " + factBuilder);
+                    facts.add("The " + incorrectAnimal + " doesn't have " + factBuilder);
+                    facts.add("Does it have " + factBuilder);
+                    break;
+                case "is":
+                    facts.add("The " + correctAnimal + " is " + factBuilder);
+                    facts.add("The " + incorrectAnimal + " isn't " + factBuilder);
+                    facts.add("Is it " + factBuilder);
+                    break;
+            }
+
+            return facts;
+        }
+
+        public static String generateAnimalWithoutArticle(String animalWithArticle) {
+            animalWithArticle = animalWithArticle.toLowerCase().trim();
+
+            if (animalWithArticle.startsWith("a") || animalWithArticle.startsWith("an")) {
+                String[] words = animalWithArticle.split(" ");
+                if (words.length < 2) {
+                    return animalWithArticle;
+                } else {
+                    StringBuilder animalName = new StringBuilder();
+                    for (int i = 1; i < words.length; i++) {
+                        animalName.append(words[i]);
+
+                        if (i != words.length - 1) {
+                            animalName.append(" ");
+                        }
+                    }
+                    return animalName.toString();
+                }
+            } else {
+                return animalWithArticle;
+            }
+        }
+
+    }
+  learner_created: true
+- name: src/animals/Util.java
+  visible: true
+  learner_created: true
+- name: src/animals/Test.java
+  visible: true
+  learner_created: true
+- name: animal.json
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/projects/132/stages/707/implement#comment
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Wed, 23 Dec 2020 07:32:48 UTC
+record: 5
